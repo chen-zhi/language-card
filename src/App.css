@@ -1,44 +1,41 @@
-.App .main-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 2em;
-  justify-items: center;
-}
-
-.ui.card {
-  margin: 0;
-}
-
 .App {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: min-content 1fr min-content;
 }
 
-.content-wrapper {
+header {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  margin-bottom: 50px;
+}
+
+nav {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  margin-right: 40px;
+}
+
+main {
+  grid-column: 2 / 3;
+  grid-row: 2;
   display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: auto;
-    grid-template-areas: 
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd main main main main main main main main";
-    grid-gap: 50px 100px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: min-content;
+  grid-gap: 2em;
 }
 
-.header {
-  grid-area: hd;
-}
-.main-content {
-  grid-area: main;
-}
-.sidebar {
-  grid-area: sd;
-}
-
-.footer {
+footer {
+  grid-column: 1 / 3;
+  grid-row: 3;
   text-align: center;
   border-top: 2px solid #efefef;
   padding: 10px 0;
   background: #f5f6f5;
-  color: #777; 
+  color: #777;
+}
+
+.ui.card {
+  margin: 0;
 }

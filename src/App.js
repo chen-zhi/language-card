@@ -8,27 +8,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="content-wrapper">
-          <div className="header">
-            <Menu />
-          </div>
-          <div className="sidebar">
-            <SidebarMenu />
-          </div>
-          <div className="main-content" style={{ margin: "0 50px 100px 0" }}>
-            <WordCard />
-            <WordCard />
-            <WordCard />
-            <WordCard />
-            <WordCard />
-            <WordCard />
-            <WordCard />
-            <WordCard />
-            <WordCard />
-            <WordCard />
-          </div>
-        </div>
-        <div className="footer">Made by Zhi</div>
+        <header>
+          <Menu />
+        </header>
+        <nav>
+          <SidebarMenu />
+        </nav>
+        <main style={{ margin: "0 50px 100px 0" }}>
+          <WordCard />
+          <WordCard />
+          <WordCard />
+          <WordCard />
+          <WordCard />
+          <WordCard />
+          <WordCard />
+          <WordCard />
+          <WordCard />
+          <WordCard />
+        </main>
+        <footer>
+          <div>Made by Zhi</div>
+        </footer>
       </div>
     );
   }
